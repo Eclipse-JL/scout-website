@@ -6,7 +6,7 @@ body {
   
   .header {
     background-image: url(images/bgheader.png);
-    background-position: right;
+    background-size: cover;
     display: flex;
   }
 
