@@ -7,7 +7,6 @@ body {
   .header {
     background-image: url(images/bgheader.png);
     display: flex;
-    filter: grayscale(0%);
   }
 
   .title {
