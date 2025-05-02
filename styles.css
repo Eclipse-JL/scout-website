@@ -10,7 +10,7 @@ body {
   }
 
   .title {
-    margin-block: 100px;
+    position: relative;
     color: #f2f2f2;
   }
   
