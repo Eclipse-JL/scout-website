@@ -7,7 +7,7 @@ body {
   .header {
     background-image: url(images/bgheader.png);
     display: flex;
-    filter: grayscale(100%);
+    filter: grayscale(25%);
   }
 
   .title {
