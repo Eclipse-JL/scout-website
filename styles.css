@@ -41,3 +41,8 @@ body {
   .content {
     padding: 16px;
   }
+
+  @keyframes move {
+    from {left: 0;}
+    to {left: 110px;}
+  }
