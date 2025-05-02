@@ -10,8 +10,7 @@ body {
   }
 
   .title {
-    margin-top: 70px;
-    margin-left: 250px;
+    margin-block: 100px;
     color: #f2f2f2;
   }
   
