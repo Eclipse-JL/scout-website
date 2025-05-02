@@ -3,7 +3,9 @@ body {
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+  div.header {
+    display: flex;
+  }
   .header {
     background-image: url(images/bgheader.png);
   }
