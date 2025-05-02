@@ -7,11 +7,11 @@ body {
   .header {
     background-image: url(images/bgheader.png);
     display: inline-flex;
+    position: absolute;
   }
 
   .title {
-    background-color: #000;
-    opacity: 0.3;
+    background-color: rgb(0 0 0 / 0.5);
     padding-top: 20px;
     padding-left: 30px;
     color: #f2f2f2;
