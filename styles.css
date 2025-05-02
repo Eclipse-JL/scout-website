@@ -6,6 +6,9 @@ body {
   
   .header {
     background-image: url(images/bgheader.png);
+  }
+
+  .title {
     padding: 30px;
     text-align: center;
     color: #f2f2f2;
@@ -44,4 +47,6 @@ body {
 
   .logo {
     position: relative;
+    left: 5px;
+    top: 5px;
   }
