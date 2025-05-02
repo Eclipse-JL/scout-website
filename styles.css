@@ -6,14 +6,12 @@ body {
   
   .header {
     background-image: url(images/bgheader.png);
-    display: inline-flex;
-    position: relative;
+    display: flex;
   }
 
   .title {
-    background-color: rgb(0 0 0 / 0.8);
-    padding-top: 20px;
-    padding-left: 30px;
+    margin-top: 100px;
+    margin-left: 200px;
     color: #f2f2f2;
   }
   
