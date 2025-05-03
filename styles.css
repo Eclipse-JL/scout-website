@@ -8,7 +8,8 @@ body {
     background-image: url(images/bgheader.png);
     background: rgba(0, 0, 0, 0.4);
     display: flex;
-    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .title {
