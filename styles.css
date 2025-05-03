@@ -7,13 +7,15 @@ body {
   .header {
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0.7)
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.4)
     ),
     url(images/bgheader.png);
     display: flex;
     position: relative; /* Make the header the positioning context */
-    height: 200px; /* Adjust height as needed */
+    height: 700px; /* Adjust height as needed */
+    /*clip-path: ellipse(80% 100% at 30% 0)*/
+    mask: radial-gradient(80% 30% at bottom,#0000 100%,#000);
   }
 
   .title {
@@ -23,7 +25,7 @@ body {
     left: 50%; /* Move to the center horizontally */
     top: 30%; /* Move to the center vertically */
     transform: translate(-50%, -50%); /* Adjust for centering */
-}
+  }
 
   .logo {
     position: relative;
@@ -36,5 +38,5 @@ body {
   }
 
   body {
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(75, 116, 85);
   }
