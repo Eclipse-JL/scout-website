@@ -6,23 +6,24 @@ body {
   
   .header {
     background: 
-    
     linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
     ),
-
     url(images/bgheader.png);
     display: flex;
-    
+    position: relative; /* Make the header the positioning context */
+    height: 200px; /* Adjust height as needed */
   }
 
   .title {
     position: absolute;
     color: #f2f2f2;
-    border: red;
-    border-width: 2px;
-  }
+    text-align: center; /* Center text horizontally */
+    left: 50%; /* Move to the center horizontally */
+    top: 30%; /* Move to the center vertically */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+}
 
   .logo {
     position: relative;
