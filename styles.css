@@ -10,8 +10,17 @@ body {
   }
 
   .title {
-    position: relative;
+    position: absolute;
     color: #f2f2f2;
+    background: rgba(0, 0, 0, 0.5);
+    border: red;
+    border-width: 1px;
+  }
+
+  .logo {
+    position: relative;
+    left: 20px;
+    top: 20px;
   }
   
   #navbar {
@@ -45,12 +54,6 @@ body {
   
   .content {
     padding: 16px;
-  }
-
-  .logo {
-    position: relative;
-    left: 20px;
-    top: 20px;
   }
 
   .dropdown {
