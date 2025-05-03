@@ -5,11 +5,9 @@ body {
   }
   
   .header {
-    background-image: url(images/bgheader.png);
-    background: rgba(0, 0, 0, 0.4);
+    background: url(images/bgheader.png), rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
   }
 
   .title {
@@ -27,4 +25,8 @@ body {
 
   .content {
     padding: 16px;
+  }
+
+  body {
+    background-color: rgb(54, 54, 54);
   }
