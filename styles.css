@@ -2,41 +2,52 @@ body {
     margin: 0;
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .header {
+}
+
+.header {
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.2)
     ),
     url(images/bgheader_cropped.png);
     display: flex;
-    position: relative; /* Make the header the positioning context */
-    height: 700px; /* Adjust height as needed */
-    /*clip-path: ellipse(80% 100% at 30% 0)*/
+    position: relative;
+    height: 700px;
     mask: radial-gradient(80% 30% at bottom,#0000 100%,#000);
-  }
+}
 
-  .title {
+.title {
     position: absolute;
     color: #f2f2f2;
-    text-align: center; /* Center text horizontally */
-    left: 50%; /* Move to the center horizontally */
-    top: 30%; /* Move to the center vertically */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-  }
+    text-align: center;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
 
-  .logo {
+.logo {
     position: relative;
     left: 15px;
     top: 15px;
-  }
+}
 
-  .content {
+.content {
+    font-family: Georgia, helvetica, sans-serif;
     padding: 16px;
-  }
+}
 
-  body {
+body {
     background-color: rgb(75, 116, 85);
-  }
+}
+
+.header-bottom-text {
+    font-family: Georgia, helvetica, sans-serif;
+    position: relative;
+    background-color: rgb(75, 116, 85);
+    text-align: center;
+    font-size: 120%;
+    color: #312a7a;
+    padding: 10px 0;
+    margin-top: -10%;
+}
