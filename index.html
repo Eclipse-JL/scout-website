@@ -13,16 +13,41 @@
                 <div><img class="logo" src="images/foulard.png" width="125" height="150"></div>
             </div>
             <div class="header-bottom-text">
-                <p>Bienvenue au site web officiel des scouts de Saint-Georges!</p>
+                <p>Le 49e Groupe Scout!</p>
             </div>
 
-        <div id="navbar">
-            
-        </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#explication">-Explication des scouts</a>
+                <a href="#49">-Le 49e groupe scout</a>
+                <a href="#dates">-Dates importantes</a>
+                <a href="#financement">-Moyens de financements</a>
+                <a href="#photos">-Photos</a>
+                <a href="#implication">-Comment s'impliquer?</a>
+              </div>
+              
+              <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+
+              <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById("main").style.marginLeft= "0";
+                  document.body.style.backgroundColor = "white";
+                }
+                </script>
+
 
         <div class="content">
             <br><br>
-            <h3>Sticky Navigation Example</h3>
+            <h3 id="example">Sticky Navigation Example</h3>
             <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<br><br>
                 Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<br><br>
                 Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<br><br>
