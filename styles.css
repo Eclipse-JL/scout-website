@@ -59,6 +59,11 @@ body {
     transition: background-color .5s;
   }
   
+  .choicenav{
+    border-bottom: 2px dotted #ccc;
+  }
+
+
   .sidenav {
     height: 100%;
     width: 0;
