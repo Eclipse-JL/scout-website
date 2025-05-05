@@ -15,8 +15,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 10%;
-  width: 100%;
   display: flex;
   position: relative;
   height: 700px;
@@ -37,6 +35,8 @@ body {
     position: relative;
     left: 15px;
     top: 15px;
+    width: 125px;
+    height: 150px;
 }
 
 .content {
