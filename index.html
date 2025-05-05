@@ -6,6 +6,7 @@
         <link rel="shortcut icon" href="images/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
     </head>
 
     <body>
@@ -18,6 +19,7 @@
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">-Haut de page</a>
                 <a href="#explication">-Explication des scouts</a>
                 <a href="#49">-Le 49e groupe scout</a>
                 <a href="#dates">-Dates importantes</a>
@@ -27,22 +29,8 @@
               </div>
               
               <div id="main">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+                <span onclick="openNav()">&#9776; Navigation</span>
               </div>
-
-              <script>
-                function openNav() {
-                  document.getElementById("mySidenav").style.width = "250px";
-                  document.getElementById("main").style.marginLeft = "250px";
-                  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-                }
-                
-                function closeNav() {
-                  document.getElementById("mySidenav").style.width = "0";
-                  document.getElementById("main").style.marginLeft= "0";
-                  document.body.style.backgroundColor = "white";
-                }
-                </script>
 
 
         <div class="content">
