@@ -1,3 +1,8 @@
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -30,146 +35,128 @@ body {
 }
 
 .logo {
-    position: relative;
-    left: 15px;
-    top: 15px;
-    width: 125px;
-    height: 150px;
-}
-
-.content {
-    padding: 16px;
+  position: relative;
+  left: 15px;
+  top: 15px;
+  width: 125px;
+  height: 150px;
 }
 
 .header-bottom-text {
-    font-family: Georgia, helvetica, sans-serif;
-    position: relative;
-    text-align: center;
-    font-size: 120%;
-    color: #312a7a;
-    padding: 10px 0;
-    margin-top: -10%;
-    text-shadow: 5px 5px 4px gray;
-}
-  
-  .choicenav{
-    border-bottom: 2px dotted #ccc;
-  }
-
-
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  #main {
-    font-size:30px;
-    cursor:pointer;
-    display: inline-block;
-    transform: translate(1%, 5%);
-    transition: margin-left .5s;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    color:#2e2b7c;
-    background-color: #73add5;
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000; /* Assure que le bouton reste au-dessus du texte */
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-  @media screen and (min-width: 601px) {
-    .media-change {
-      font-size: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .media-change {
-      font-size: 15px;
-      width: 100%;
-      flex-wrap: wrap;
-    }
-  }
-
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Couleur semi-transparente */
-    z-index: 999; /* Place l'overlay en dessous du sidenav */
-    display: none; /* Masque l'overlay par défaut */
+  font-family: Georgia, helvetica, sans-serif;
+  position: relative;
+  text-align: center;
+  font-size: 120%;
+  color: #312a7a;
+  padding: 10px 0;
+  margin-top: -10%;
+  text-shadow: 5px 5px 4px gray;
 }
 
 #mySidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000; /* Place le sidenav au-dessus de l'overlay */
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000; /* Place le sidenav au-dessus de l'overlay */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+  
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.choicenav{
+  border-bottom: 2px dotted #ccc;
+}
+  
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Couleur semi-transparente */
+  z-index: 999; /* Place l'overlay en dessous du sidenav */
+  display: none; /* Masque l'overlay par défaut */
+}
+
+#main {
+  font-size:30px;
+  cursor:pointer;
+  display: inline-block;
+  transform: translate(1%, 5%);
+  transition: margin-left .5s;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  color:#2e2b7c;
+  background-color: #73add5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Assure que le bouton reste au-dessus du texte */
+}
+
+
+.content {
+  padding: 16px;
 }
 
 .title {
-    scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
+  text-align: center; ;
 }
 
 .text {
-    margin-left: 2%;
-    width: 90%;
+  margin-left: 2%;
+  width: 90%;
 }
 
-.text-histoire{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.text-origines{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.text-histoire img {
-    width: 360px;
-    height: 360px;
-    transform: translate(10%, -5%);
+.text-origines img {
+  width: 360px;
+  height: 360px;
+  transform: translate(10%, -5%);
 }
 
 .container-image {
@@ -189,7 +176,7 @@ body {
 
 
 body.darken img {
-    filter: brightness(60%); /* Réduit la luminosité des images */
+  filter: brightness(60%); /* Réduit la luminosité des images */
 }
 
 .overlay-BP {
