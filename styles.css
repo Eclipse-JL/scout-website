@@ -146,7 +146,7 @@ body {
   width: 90%;
 }
 
-.text-origines{
+.text-origines, .text-and-picture-ASC{
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -203,13 +203,6 @@ body.darken img {
   margin-left: 5%;
 }
 
-.text-and-picture-ASC{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
 .text-and-picture-ASC img {
   width: 340px;
   height: 340px;
@@ -234,3 +227,4 @@ body.darken img {
 .container-image:hover .overlay-ASC {
   opacity: 1;
 }
+
