@@ -128,12 +128,13 @@ body {
   background-color: #73add5;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 1000; /* Assure que le bouton reste au-dessus du texte */
+  z-index: 1000;
 }
 
 
 .content {
   padding: 16px;
+  text-align: justify;
 }
 
 .title {
@@ -146,17 +147,15 @@ body {
   width: 90%;
 }
 
-.text-origines, .text-and-picture-ASC{
+
+
+/* Pour tout les textes avec les images */
+
+.text-and-picture{
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-}
-
-.text-origines img {
-  width: 360px;
-  height: 360px;
-  transform: translate(10%, -5%);
 }
 
 .container-image {
@@ -165,60 +164,92 @@ body {
   max-width: 300px;
 }
 
-.img{
+.picture{
   filter: brightness(100%);
-  transition: filter 0.5s ease; /* Ajoute une transition fluide */
+  transition: filter 0.5s ease;
   z-index: 1;
   display: block;
-  width: 100%;
-  height: auto;
 }
-
 
 body.darken img {
-  filter: brightness(60%); /* Réduit la luminosité des images */
+  filter: brightness(60%);
 }
 
+
+
+/* Pour les images à droite */
+
+#text-origines img  {
+  width: 360px;
+  height: 360px;
+  margin-left: 10%; /* Remplace translate(10%, -5%) */
+  margin-top: -5%; /* Remplace translate(10%, -5%) */
+}
 .overlay-BP {
-  transform: translate(13%, -35%);
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
+  position: absolute;
+  top: 73%; /* Ajustez pour remplacer translate(-35%) */
+  left: 13%; /* Ajustez pour remplacer translate(13%) */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
-  opacity:0;
-  color: white;
+  opacity: 0;
   font-size: 20px;
   padding: 20px;
   text-align: center;
 }
-
-.container-image:hover .overlay-BP {
+.container-image:hover .overlay-BP{
   opacity: 1;
 }
+
+
+#tap-historique img {
+  width: 100%;
+  margin-left: 20%; /* Remplace translate(22%, 10%) */
+  margin-top: 10%; /* Remplace translate(22%, 10%) */
+}
+.text-historique {
+  width: 100%;
+}
+.overlay-archive {
+  position: absolute;
+  top: 80%; /* Ajustez pour remplacer translate(-35%) */
+  left: 13%; /* Ajustez pour remplacer translate(13%) */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.container-image:hover .overlay-archive{
+  opacity: 1;
+}
+
+
+
+/* Pour les images à gauche */
 
 .text-ASC{
   margin-left: 5%;
 }
 
-.text-and-picture-ASC img {
+#tap-ASC img {
   width: 340px;
   height: 340px;
 }
 
 .overlay-ASC {
-  transform: translate(0%, -30%);
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
+  position: absolute;
+  top: 77%;/* Ajustez pour remplacer translate(-30%) */
+  left: 0%; /* Pas besoin de translate(0%) */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
-  opacity:0;
-  color: white;
+  opacity: 0;
   font-size: 20px;
   padding: 20px;
   text-align: center;
@@ -226,5 +257,94 @@ body.darken img {
 
 .container-image:hover .overlay-ASC {
   opacity: 1;
+}
+
+/* Style pour la section des moyens de financement */
+.financement {
+    background-color: #f9f9f9; /* Couleur de fond différente */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.financement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.financement-item {
+    background-color: #73add5; /* Couleur par défaut pour tous les blocs */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 150px; /* Hauteur fixe pour tous les blocs */
+    display: flex;
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
+}
+
+.financement-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Espacement entre les deux séries de blocs */
+.financement-grid .financement-item:nth-child(5),
+.financement-grid .financement-item:nth-child(6),
+.financement-grid .financement-item:nth-child(7) {
+    margin-top: 30px; /* Ajoute de l'espace entre les deux séries */
+    background-color: #4caf50; /* Change la couleur de fond des blocs de la deuxième série */
+}
+
+.financement-separator {
+    grid-column: span 3; /* Étend le texte sur toute la largeur des colonnes */
+    text-align: center;
+    margin: 20px 0; /* Ajoute de l'espace au-dessus et en dessous du texte */
+    font-size: 18px;
+    color: #333; /* Couleur du texte */
+    font-weight: bold;
+}
+
+/* Style pour les détails */
+.details-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Masqué par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.details-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.details-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.close-details {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
 }
 
