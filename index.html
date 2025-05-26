@@ -291,13 +291,76 @@
                     </div>
                 </div>
             </div>
-            <h2 id="photos" class ="title">Section photos</h2>
+           <!--
+             <h2 id="photos" class ="title">Section photos</h2>
                 <br><br>
                     <div class="text">
-                        <p>
-                            
-                        </p>
+                        
+                        <div class="photo-gallery">
+
+                        
+                        <div class="gallery-group">
+                            <div class="gallery-header" onclick="toggleGalleryLayout(this)">
+                                <h3>Castors</h3>
+                                <span class="gallery-arrow">&#9660;</span>
+                            </div>
+                            <div class="gallery-row-wrapper">
+                                <button class="gallery-scroll-btn left" onclick="scrollGallery(this, -1)">&lt;</button>
+                                <div class="gallery-row">
+                                    <img src="images/castors1.jpg" alt="Castors activité 1" onclick="openLightbox(this)">
+                                    <img src="images/castors2.jpg" alt="Castors activité 2" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                    <img src="images/castors3.jpg" alt="Castors activité 3" onclick="openLightbox(this)">
+                                </div>
+                                <button class="gallery-scroll-btn right" onclick="scrollGallery(this, 1)">&gt;</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="gallery-group">
+                            <div class="gallery-header" onclick="toggleGalleryLayout(this)">
+                                <h3>Louveteaux</h3>
+                                <span class="gallery-arrow">&#9660;</span>
+                            </div>
+                            <div class="gallery-row">
+                                <img src="images/louveteaux1.jpg" alt="Louveteaux activité 1">
+                                <img src="images/louveteaux2.jpg" alt="Louveteaux activité 2">
+                            </div>
+                        </div>
+
+                        
+                        <div class="gallery-group">
+                            <div class="gallery-header" onclick="toggleGalleryLayout(this)">
+                                <h3>Camp d'été 2024</h3>
+                                <span class="gallery-arrow">&#9660;</span>
+                            </div>
+                            <div class="gallery-row">
+                                <img src="images/camp1.jpg" alt="Camp d'été 1">
+                                <img src="images/camp2.jpg" alt="Camp d'été 2">
+                                <img src="images/camp3.jpg" alt="Camp d'été 3">
+                            </div>
+                        </div>
+
+                        </div>
                     </div>
+            
+            <div id="lightbox-overlay" onclick="closeLightbox(event)">
+                <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            -->
             <div id="footer">
                 <div id="footer-top">
                     <div id="footer-icons">
@@ -339,6 +402,7 @@
                                 <li><a href="#implication">Aide de camps ou d'activités</a></li>
                             </ul>
                         </div>
+                        <!--
                         <div>
                             <h5>Section photos</h5>
                             <ul id="liste-photos">
@@ -346,6 +410,7 @@
                                 <li>Photos de nos camps</li>
                             </ul>
                         </div>
+                        -->
                     </div>
                     <div id="nous-rejoindre">
                         <h5 id="comment-nous-rejoindre">Comment nous rejoindre ?</h5>
@@ -362,7 +427,12 @@
                     </div>
                 </div>
                 <div id="footer-bottom">
-
+                    <p>
+                        © 2025 49e Groupe Scout St-Georges.
+                    </p>
+                    <p>
+                        Ce site est une réalisation de Léonard Toulouse et Jacob Bilodeau comme projet de fin de secondaire.
+                    </p>
                 </div>
             </div>  
         </div>
