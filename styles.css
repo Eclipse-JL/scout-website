@@ -651,6 +651,7 @@ body.darken img {
     height: auto;
     font-size: 1em;
     padding: 16px;
+    cursor: pointer;
   }
   .financement-separator {
     font-size: 1em;
@@ -779,10 +780,17 @@ iframe {
     background: #1877f3;
     color: #fff;
 }
-.contact-icon {
+.contact-mail {
     width: 28px;
     height: 28px;
-    display: block;
+    display: inline-block;
+}
+
+.contact-face {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    object-fit: contain;
 }
 
 #comment-nous-rejoindre{
@@ -793,4 +801,8 @@ iframe {
 #nous-rejoindre .contact-buttons {
     justify-content: flex-end;
     margin-right: 50px;
+}
+
+#footer-grid {
+    margin-left: 90px;
 }
