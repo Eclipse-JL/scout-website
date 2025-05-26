@@ -3,10 +3,10 @@ function toggleNav() {
     const overlay = document.getElementById("overlay");
 
     if (sidenav.style.width === "250px") {
-        // Si le sidenav est ouvert, on le ferme
+        
         closeNav();
     } else {
-        // Sinon, on l'ouvre
+        
         openNav();
     }
 }
@@ -15,7 +15,7 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    document.getElementById("overlay").style.display = "block"; // Affiche l'overlay
+    document.getElementById("overlay").style.display = "block"; 
     document.body.classList.add("darken");
 }
 
@@ -23,48 +23,53 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
-    document.getElementById("overlay").style.display = "none"; // Masque l'overlay
+    document.getElementById("overlay").style.display = "none"; 
     document.body.classList.remove("darken");
 }
 
+const detailsData = {
+    calendrier: {
+        title: "Calendrier",
+        text: "Le calendrier est une campagne annuelle où nous vendons des calendriers personnalisés pour financer nos activités.",
+        image: "images/calendrier.png"
+    },
+    chocolat: {
+        title: "Chocolat",
+        text: "La vente de chocolat est une tradition qui aide à financer nos projets tout en offrant de délicieuses friandises.",
+        image: "images/chocolat.png"
+    },
+    lave: {
+        title: "Lave-O-Thon",
+        text: "Le Lave-O-Thon est une activité où nous lavons des voitures pour collecter des fonds tout en interagissant avec la communauté.",
+        image: "images/lave-o-thon.png"
+    },
+    canette: {
+        title: "Canette",
+        text: "La collecte de canettes est une initiative écologique et financière pour soutenir nos activités.",
+        image: "images/canette.png"
+    },
+    linge: {
+        title: "Linge",
+        text: "Nous collectons des vêtements usagés pour les revendre ou les recycler afin de financer nos projets.",
+        image: "images/linge.png"
+    },
+    dons: {
+        title: "Dons",
+        text: "Les dons sont essentiels pour nous permettre de continuer à offrir des activités enrichissantes à nos membres.",
+        image: "images/dons.png"
+    }
+};
 
-function showDetails(item) {
-    document.getElementById("details-title").textContent = item.getAttribute("data-title");
-    document.getElementById("details-text").innerHTML = item.querySelector('.financement-details').innerHTML;
-    document.getElementById("details-image").src = item.getAttribute("data-image");
-    document.getElementById("details-container").style.display = "flex";
+function showDetails(campaign) {
+    const details = detailsData[campaign];
+    if (details) {
+        document.getElementById("details-title").textContent = details.title;
+        document.getElementById("details-text").textContent = details.text;
+        document.getElementById("details-image").src = details.image;
+        document.getElementById("details-container").style.display = "flex";
+    }
 }
 
 function hideDetails() {
     document.getElementById("details-container").style.display = "none";
 }
-
-document.querySelectorAll('.implication-item').forEach(item => {
-    // Ouvre au survol
-    item.addEventListener('mouseenter', function() {
-        this.classList.add('open');
-    });
-    // Ferme au sortir de la souris, seulement si pas "verrouillé" par clic
-    item.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('locked')) {
-            this.classList.remove('open');
-        }
-    });
-    // Ouvre/ferme au clic et "verrouille" l'ouverture
-    item.querySelector('.implication-header').addEventListener('click', function(e) {
-        // Enlève le verrouillage sur tous les autres
-        document.querySelectorAll('.implication-item').forEach(i => {
-            if (i !== item) {
-                i.classList.remove('locked');
-                i.classList.remove('open');
-            }
-        });
-        // Verrouille ou déverrouille ce bloc
-        item.classList.toggle('locked');
-        if (item.classList.contains('locked')) {
-            item.classList.add('open');
-        } else {
-            item.classList.remove('open');
-        }
-    });
-});
