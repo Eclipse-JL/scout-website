@@ -15,10 +15,11 @@ body {
     margin: 0;
     font-size: 20px;
     font-family: Georgia, helvetica, sans-serif;
-    background-color: white;
+    background-color: #ffffff;
     color: #312a7a;
     transition: background-color .5s;
     overflow-x: hidden;
+    /*background: linear-gradient(to bottom, #ffffff, #172f58, #ffffff, #f775c3)*/
 }
 
 .header {
@@ -156,9 +157,17 @@ h3 {
   width: 90%;
 }
 
+.quote {
+  margin-left: 36%;
+  margin-bottom: -9%;
+  width: 30%;
+  height: 30%;
+  transform: rotate(5deg);
+}
+
 #text-49 {
   padding: 50px;
-  background-color: darkblue;
+  background-color: #172f58;
   color: #ffffff;
 }
 
@@ -173,7 +182,7 @@ iframe {
 
 #text-implication {
   padding: 50px;
-  background-color: rgb(241, 66, 217);
+  background-color: rgb(247, 117, 195);
 }
 
 /* Pour tout les textes avec les images */
@@ -229,6 +238,10 @@ body.darken img {
   opacity: 1;
 }
 
+#tap-historique, #tap-âges{
+  padding-bottom: 5%;
+  border-bottom: 5px double #ccc;
+}
 
 #tap-historique img {
   width: 100%;
@@ -438,4 +451,128 @@ body.darken img {
 .don-list {
     text-align: left;
     list-style-type: square;
+}
+
+/* section implication */
+
+#intro-implication {
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.implication-list {
+    max-width: 700px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.implication-item {
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(49, 42, 122, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.implication-item:nth-child(1) {
+    background: linear-gradient(90deg, #007748 50%, #048e57 100%);
+}
+.implication-item:nth-child(2) {
+    background: linear-gradient(90deg, #002d5a 50%, #044b92 100%);
+}
+.implication-item:nth-child(3) {
+    background: linear-gradient(90deg, #8237ff 50%, #a46ff9 100%);
+}
+
+.implication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 32px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.implication-item:hover .implication-header {
+    background: rgba(49, 42, 122, 0.12);
+}
+
+.arrow {
+    transition: transform 0.3s;
+    font-size: 1.4em;
+}
+
+.implication-item .implication-content {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 32px;
+    background: #fff;
+    color: #312a7a;
+    font-size: 1.08em;
+    transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+    overflow: hidden;
+}
+
+.implication-item.open .implication-content,
+.implication-item:hover .implication-content {
+    max-height: 200px;
+    opacity: 1;
+    padding: 18px 32px 28px 32px;
+}
+
+.implication-item.open .arrow,
+.implication-item:nth-child(1):hover.arrow {
+    transform: rotate(90deg);
+    color: #007748;
+}
+.implication-item:nth-child(2):hover .arrow {
+    transform: rotate(90deg);
+    color: #002d5a;
+}
+.implication-item:nth-child(3):hover .arrow {
+    transform: rotate(90deg);
+    color: #8237ff;
+}
+
+#footer {
+    background-color: #007748;
+    color: white;
+    font-size: 16px;
+    padding: 5%;
+}
+
+#footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+#foulard {
+  width: 125px;
+  height: 150px;
+  
+}
+
+#ASC {
+  width: 242px;
+  height: 130px;
+}
+
+#footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  line-height: 1.6;
+}
+
+#liste-histoire, #liste-49, #liste-financement, #liste-implication, #liste-photos, #liste-test {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

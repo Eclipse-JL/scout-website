@@ -38,3 +38,33 @@ function showDetails(item) {
 function hideDetails() {
     document.getElementById("details-container").style.display = "none";
 }
+
+document.querySelectorAll('.implication-item').forEach(item => {
+    // Ouvre au survol
+    item.addEventListener('mouseenter', function() {
+        this.classList.add('open');
+    });
+    // Ferme au sortir de la souris, seulement si pas "verrouillé" par clic
+    item.addEventListener('mouseleave', function() {
+        if (!this.classList.contains('locked')) {
+            this.classList.remove('open');
+        }
+    });
+    // Ouvre/ferme au clic et "verrouille" l'ouverture
+    item.querySelector('.implication-header').addEventListener('click', function(e) {
+        // Enlève le verrouillage sur tous les autres
+        document.querySelectorAll('.implication-item').forEach(i => {
+            if (i !== item) {
+                i.classList.remove('locked');
+                i.classList.remove('open');
+            }
+        });
+        // Verrouille ou déverrouille ce bloc
+        item.classList.toggle('locked');
+        if (item.classList.contains('locked')) {
+            item.classList.add('open');
+        } else {
+            item.classList.remove('open');
+        }
+    });
+});
