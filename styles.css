@@ -274,17 +274,17 @@ body.darken img {
 }
 #tap-terre img {
   width: 260%;
-  margin-left: -250%; /* Remplace translate(22%, 10%) */
-  margin-top: 10%; /* Remplace translate(22%, 10%) */
+  margin-left: -250%; 
+  margin-top: 10%; 
   transform: rotate(-2deg);
 }
 .overlay-terre-1 {
   position: absolute;
-  top: 41.2%; /* Ajustez pour remplacer translate(-35%) */
-  left: -168%; /* Ajustez pour remplacer translate(13%) */
+  top: 41.2%; 
+  left: -168%; 
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
-  width: 90%;
+  width: 100%;
   transition: .5s ease;
   opacity: 0;
   font-size: 20px;
@@ -294,8 +294,8 @@ body.darken img {
 }
 .overlay-terre-2 {
   position: absolute;
-  top: 88%; /* Ajustez pour remplacer translate(-35%) */
-  left: -168%; /* Ajustez pour remplacer translate(13%) */
+  top: 88%; 
+  left: -168%;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 90%;
