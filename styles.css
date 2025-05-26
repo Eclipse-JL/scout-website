@@ -426,7 +426,7 @@ body.darken img {
   width: 260%;
   margin-left: -250%; 
   margin-top: 10%; 
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
 }
 .overlay-terre-1 {
   position: absolute;
@@ -440,7 +440,7 @@ body.darken img {
   font-size: 20px;
   padding: 20px;
   text-align: center;
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
 }
 .overlay-terre-2 {
   position: absolute;
@@ -454,7 +454,7 @@ body.darken img {
   font-size: 20px;
   padding: 20px;
   text-align: center;
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
 }
 .container-image:hover .overlay-terre-1{
   opacity: 1;
